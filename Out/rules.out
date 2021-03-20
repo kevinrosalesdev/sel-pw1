@@ -1,0 +1,5 @@
+R1: IF Age = 'presbyopic' -> ContactLens = 'none'
+R2: IF TearProdRate = 'reduced' -> ContactLens = 'none'
+R3: IF Age = 'pre-presbyopic' AND SpectaclePrescrip = 'myope' -> ContactLens = 'hard'
+R4: IF Age = 'pre-presbyopic' AND SpectaclePrescrip = 'hypermetrope' -> ContactLens = 'soft'
+R5: IF Age = 'young' AND SpectaclePrescrip = 'myope' -> ContactLens = 'soft'
