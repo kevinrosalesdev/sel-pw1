@@ -13,7 +13,7 @@ def format_rules(rules, print_rules=False):
     return str_rules
 
 
-def write_rules(rules):
-    f = open('Out/rules.out', 'w')
+def write_rules(rules, file='rules'):
+    f = open(f'Out/{file}.out', 'w')
     f.write(rules)
     f.close()

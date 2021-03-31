@@ -53,6 +53,6 @@ def RULES_algorithm(dataset: pd.DataFrame):
         rule = []
         for attribute in range(nci.shape[1]-1):
             rule.append((nci.columns[attribute], nci.iloc[idx, attribute]))
-        rules.append((tuple(rule), (nci.columns[-1], nci.iloc[idx, -1])), 1/dataset.shape[0])
+        rules.append((tuple(rule), (nci.columns[-1], nci.iloc[idx, -1]), 1/dataset.shape[0]))
 
     return rules
