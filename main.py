@@ -18,11 +18,12 @@ def evaluate(dataset, rules_fn='rules', train_test_ratio=0.8):
     print(f'RULES Classification Time: {end_time - start_time}')
     print("________________________________________________")
     ground_truth = list(test_set.iloc[:, -1])
-    print(f"Predicted: {prediction}")
-    print(f"GT       : {ground_truth}")
-    print(f"Accuracy : {metrics.get_accuracy(ground_truth, prediction)*100}%")
-    print(f"Classification Report:\n{metrics.classification_report(ground_truth, prediction)}")
-    print(f"Confusion Matrix:\n{metrics.get_confusion_matrix(ground_truth, prediction)}")
+    print(f"Predicted:\n{prediction}")
+    print(f"GT:\n{ground_truth}\n")
+    print(f"Global Accuracy                  : {round(metrics.get_global_accuracy(ground_truth, prediction)*100, 3)}%")
+    print(f"Accuracy of Classified Instances : {round(metrics.get_classified_accuracy(ground_truth, prediction)*100, 3)}%\n")
+    print(f"Classification Report [Global]:\n{metrics.classification_report(ground_truth, prediction)}")
+    print(f"Confusion Matrix [Global]:\n{metrics.get_confusion_matrix(ground_truth, prediction)}")
 
 
 if __name__ == '__main__':
