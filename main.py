@@ -52,20 +52,22 @@ if __name__ == '__main__':
     rice = preprocessor.load_rice_dataset().sample(frac=1, random_state=0)
     evaluate(rice, rules_fn='rice_rules', train_test_ratio=0.8)
 
-    # print("\n===============================================")
-    # print("Stroke Dataset Evaluation [Large Dataset]")
-    # print("===============================================")
-    # stroke = preprocessor.load_stroke_dataset().sample(frac=1, random_state=0)
-    # evaluate(stroke, rules_fn='stroke_rules', train_test_ratio=0.8)
+    print("\n===============================================")
+    print("Stroke Dataset Evaluation [Large Dataset]")
+    print("===============================================")
+    stroke = preprocessor.load_stroke_dataset().sample(frac=1, random_state=0)
+    evaluate(stroke, rules_fn='stroke_rules', train_test_ratio=0.8)
     """
     ===============================================
     Stroke Dataset Evaluation [Large Dataset]
     ===============================================
-    RULES Generation Time: 0:23:53.229608
-    RULES Classification Time: 0:07:54.910605
-    ________________________________________________
-    Accuracy : 92.27%
-    Classification Report:
+    RULES Generation Time: 1:30:23.586147
+    RULES Classification Time: 0:00:16.412841
+    ________________________________________________    
+    Global Accuracy                  : 92.27%
+    Accuracy of Classified Instances : 92.27%
+    
+    Classification Report [Global]:
                   precision    recall  f1-score   support
     
                0       0.95      0.97      0.96       966
@@ -75,7 +77,7 @@ if __name__ == '__main__':
        macro avg       0.53      0.51      0.52      1022
     weighted avg       0.90      0.92      0.91      1022
     
-    Confusion Matrix:
+    Confusion Matrix [Global]:
     [[940  26]
      [ 53   3]]
     """

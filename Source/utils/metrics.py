@@ -16,7 +16,7 @@ def get_classified_accuracy(ground_truth, prediction):
 
 
 def get_classification_report(ground_truth, prediction):
-    return classification_report(ground_truth, prediction, zero_division=0)
+    return classification_report(ground_truth, prediction, zero_division=1)
 
 
 def get_confusion_matrix(ground_truth, prediction):
